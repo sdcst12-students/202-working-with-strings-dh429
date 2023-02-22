@@ -15,10 +15,8 @@ def replaceDog(input):
     return
     str - the modified string
     '''
-    print(input)
     modifiedString = input.replace("dog", "kitty")
 
-    print (modifiedString)
     return modifiedString
 
 

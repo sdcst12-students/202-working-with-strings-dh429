@@ -17,8 +17,18 @@ def split(input):
     return
     str new string with line break in the middle
     '''
+    newlen = len(input)
+    newlen = newlen/2
+    newlen = round(newlen)
 
-    return
+    if input[newlen-1].isspace() == True:
+        new = input[:newlen] +  "\n"  + input[newlen:]
+
+    elif input[newlen-1].isspace() == False:
+        new = input[:newlen] + "-\n" + input[newlen:]
+        
+    print(new)
+    return new
 
 if __name__ == "__main__":
     sentence = "There is a big balloon in the blue sky"
@@ -28,4 +38,4 @@ if __name__ == "__main__":
     assert split(sentence) == "I am a \nfat cat"
 
     sentence = "I was a fat cat"
-    assert split(sentence) == "I was a\n fat cat"
+    assert split(sentence) == "I was a \nfat cat"
