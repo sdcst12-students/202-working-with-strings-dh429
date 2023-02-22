@@ -26,7 +26,7 @@ def split(input):
 
     elif input[newlen-1].isspace() == False:
         new = input[:newlen] + "-\n" + input[newlen:]
-        
+
     print(new)
     return new
 
